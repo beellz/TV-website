@@ -55,16 +55,34 @@ let heavymetal = document.querySelector(".HeavyMetal").addEventListener("click",
 
 // this is first trial for async await 
 
-async function API(url) {
+// async function API(url) {
 
-    const baseUrl = 'https://jsonplaceholder.typicode.com/';
-    const response = await fetch(baseUrl + url);
-    const data = await response.json();
-    return data;
+//     const baseUrl = 'https://jsonplaceholder.typicode.com/';
+//     const response = await fetch(baseUrl + url);
+//     const data = await response.json();
+//     return data;
 
+// };
+
+// API('users');
+
+// now adding it to button with create element 
+ 
+let showcase = document.querySelector(".uselist").addEventListener("click", function(){
+    async function API(url) {
+
+        const baseUrl = 'https://jsonplaceholder.typicode.com/';
+        const response = await fetch(baseUrl + url);
+        const data = await response.json();
+        var para = document.createElement("P");
+        para.innerHTML = data[0].name;
+        document.querySelector(".usersCall").appendChild(para);
     
+    };
+    API('users').then(console.log);
+    console.log("clicked")
+    
+});
 
 
-}
 
-API('users').then(console.log);
