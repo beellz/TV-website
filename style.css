@@ -82,5 +82,9 @@ body {
 }
 
 #iframea {
-    
+    width: 100%;
+}
+
+.icon {
+    padding: 10px;
 }
