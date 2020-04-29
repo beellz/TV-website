@@ -68,21 +68,56 @@ let heavymetal = document.querySelector(".HeavyMetal").addEventListener("click",
 
 // now adding it to button with create element 
  
-let showcase = document.querySelector(".uselist").addEventListener("click", function(){
+let showcase = document.querySelector(".uselist").addEventListener("click", makeRequest)
+
+function makeRequest(){
     async function API(url) {
 
         const baseUrl = 'https://jsonplaceholder.typicode.com/';
         const response = await fetch(baseUrl + url);
         const data = await response.json();
-        var para = document.createElement("P");
-        para.innerHTML = data[0].name;
-        document.querySelector(".usersCall").appendChild(para);
-    
+        // let name = data[0].name;
+        console.log(name)
+        let outputall = '';
+
+        data.forEach(function(data){
+            outputall +=  `
+            <ul>
+                <li> ID : ${data.id}</li>
+                <li> Name : ${data.name}</li>
+                <li> username : ${data.username}</li>
+                <li> email : ${data.email}
+            </ul    
+            `;
+        })
+
+        // const outputall = `
+        // <ul>
+        //     <li> ID : ${data[0].id}</li>
+        //     <li> Name : ${data[0].name}</li>
+        //     <li> ID : ${data[1].id}</li>
+        //     <li> Name : ${data[1].name}</li>
+        // </ul    
+        // `;
+        document.querySelector(".userCall").innerHTML = outputall
+        
+
+
+        data.forEach(function () {
+            let index = 0
+            let para = document.createElement("P");
+            // para.innerHTML = data[el].name;
+            // document.querySelector(".usersCall").appendChild(para);
+            // console.log(data[el].name)
+        
+        });
+        
     };
     API('users').then(console.log);
     console.log("clicked")
     
-});
+};
+
 
 
 
