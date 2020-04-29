@@ -86,3 +86,11 @@ body {
 .Search-button {
     text-align: center;
 }
+
+#iframea {
+    width: 100%;
+}
+
+.icon {
+    padding: 10px;
+}
