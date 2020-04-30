@@ -100,17 +100,18 @@ function makeRequest(){
         // </ul    
         // `;
         document.querySelector(".userCall").innerHTML = outputall
+        document.querySelector(".userCall").classList.add("box");
         
 
 
-        data.forEach(function () {
-            let index = 0
-            let para = document.createElement("P");
-            // para.innerHTML = data[el].name;
-            // document.querySelector(".usersCall").appendChild(para);
-            // console.log(data[el].name)
+        // data.forEach(function () {
+        //     let index = 0
+        //     let para = document.createElement("P");
+        //     // para.innerHTML = data[el].name;
+        //     // document.querySelector(".usersCall").appendChild(para);
+        //     // console.log(data[el].name)
         
-        });
+        // });
         
     };
     API('users').then(console.log);

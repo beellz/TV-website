@@ -81,6 +81,7 @@ body {
     text-align: center;
     font-weight: bold;
     color: blue;
+    
 }
 
 .Search-button {
@@ -88,9 +89,44 @@ body {
 }
 
 #iframea {
-    width: 100%;
+    ;
+}
+
+.iframeOn {
+    text-align: center;
 }
 
 .icon {
     padding: 10px;
 }
+
+.slider {
+    text-align: center;
+   
+}
+
+
+#carouselExampleIndicators {
+   padding: 7% 5%;
+   text-align: center;
+}
+
+.slider {
+    text-align: center;
+    width: 100%;
+    height: 50%;
+   
+}
+
+
+
+
+/* 
+
+.caro {
+    padding: 5px 5px;
+    width: 100%;
+} */
+/* .box {
+    border: solid black 10px;
+} */
