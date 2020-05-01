@@ -9,7 +9,6 @@
 html, body {
     margin: 0;
     height: 100%;
-    /* overflow: hidden; */
 }
 
 
@@ -114,16 +113,3 @@ body {
     height: 50%;
    
 }
-
-
-
-
-/* 
-
-.caro {
-    padding: 5px 5px;
-    width: 100%;
-} */
-/* .box {
-    border: solid black 10px;
-} */
